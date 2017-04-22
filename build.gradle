@@ -17,6 +17,7 @@ repositories {
 dependencies {
     compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
     compile 'javax.servlet:jstl:1.2'
+    testCompile 'junit:junit:4.12'
 }
 
 // Embeded Jetty for testing
