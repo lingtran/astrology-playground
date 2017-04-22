@@ -69,7 +69,7 @@
 
       <hr>
       <footer>
-        <p> &copy; Are We Compatible? 2017</p>
+        <p> &copy; 2017 Are We Compatible? </p>
       </footer>
     </div>
 
