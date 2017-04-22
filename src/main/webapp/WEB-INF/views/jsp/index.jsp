@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gradle + Spring MVC</title>
+<title>Are We Compatible?</title>
 
 </head>
 
@@ -16,7 +16,7 @@
 		</c:if>
 
 		<c:if test="${empty msg}">
-			Welcome Welcome!
+			Welcome! Are we compatible?
 		</c:if>
         </p>
         <p>
@@ -29,7 +29,7 @@
 
   <hr>
   <footer>
-	<p>© Mkyong.com 2015</p>
+	<p>© Are We Compatible? 2017</p>
   </footer>
 </div>
 
