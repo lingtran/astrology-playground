@@ -1,4 +1,4 @@
-group 'lingtran.echo-astrology-playground'
+group 'lingtran.astrology-playground'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
