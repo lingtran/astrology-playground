@@ -1,4 +1,4 @@
-package hello.service;
+package astrology.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

@@ -1,7 +1,7 @@
-package hello.web;
+package astrology.web;
 
 
-import hello.service.GreetingService;
+import astrology.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,7 +29,7 @@ public class GreetingController {
         return "index";
     }
 
-    @RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
+    @RequestMapping(value = "/astrology/{name:.+}", method = RequestMethod.GET)
     public ModelAndView hello(@PathVariable("name") String name) {
         ModelAndView model = new ModelAndView();
         model.setViewName("index");
