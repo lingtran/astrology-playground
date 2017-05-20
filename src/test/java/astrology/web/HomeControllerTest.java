@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -20,24 +21,24 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Created by lingtran on 5/7/17.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class GreetingControllerTest {
-    private GreetingController greetingController;
+public class HomeControllerTest {
+    @Autowired
+    private HomeController homeController;
 
     @Mock
     private GreetingService mockGreetingService;
-
     private MockMvc mockMvc;
 
     @Before
     public void setup() {
-        greetingController = new GreetingController(mockGreetingService);
-        mockMvc = MockMvcBuilders.standaloneSetup(greetingController).build();
+        homeController = new HomeController(mockGreetingService);
+        mockMvc = MockMvcBuilders.standaloneSetup(homeController).build();
     }
 
     @Test
     public void testIndexReturnsAString() throws Exception {
         Map<String, Object> model = new HashMap<>();
-        String result = greetingController.index(model);
+        String result = homeController.index(model);
 
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk());

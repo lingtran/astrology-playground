@@ -1,10 +1,25 @@
 group 'lingtran.astrology-playground'
 version '1.0-SNAPSHOT'
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
 apply plugin: 'jetty'
+
+jar {
+    baseName = 'astrology-playground'
+    version = '0.1.0'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -16,8 +31,10 @@ repositories {
 }
 
 dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
     compile 'javax.servlet:javax.servlet-api:3.1.0'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.springframework:spring-test:4.3.8.RELEASE'
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.7.22'
@@ -34,4 +51,8 @@ jettyRun{
 jettyRunWar{
     contextPath = ""
     httpPort = 8080
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
 }

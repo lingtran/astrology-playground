@@ -7,22 +7,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class HomeController {
 
     private final GreetingService greetingService;
 
     @Autowired
-    public GreetingController(GreetingService greetingService) {
+    public HomeController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(Map<String, Object> model) {
+    public @ResponseBody String index(Map<String, Object> model) {
         model.put("title", greetingService.getTitle(""));
         model.put("msg", greetingService.getDesc());
 
