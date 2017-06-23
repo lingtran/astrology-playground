@@ -30,7 +30,8 @@ public class HttpRequestTest {
 
     @Test
     public void indexReturnsAString() throws Exception {
-        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
-                String.class)).contains("index");
+        String something = this.restTemplate.getForObject("http://localhost:" + port + "/",
+                String.class);
+        assertThat(something).contains("index");
     }
 }
