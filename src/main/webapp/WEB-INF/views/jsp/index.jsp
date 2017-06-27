@@ -73,7 +73,7 @@
       </footer>
     </div>
 
-    <spring:url value="/resources/core/css/hello.js" var="coreJs" />
+    <spring:url value="/resources/core/js/hello.js" var="coreJs" />
     <spring:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" var="bootstrapJs" />
 
     <script src="${coreJs}"></script>

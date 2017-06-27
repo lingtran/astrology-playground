@@ -23,7 +23,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public @ResponseBody String index(Map<String, Object> model) {
+    public String index(Map<String, Object> model) {
         model.put("title", greetingService.getTitle(""));
         model.put("msg", greetingService.getDesc());
 
