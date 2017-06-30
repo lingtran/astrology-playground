@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
 
+@RequestMapping("/")
 @Controller
 public class HomeController {
 
@@ -22,7 +23,7 @@ public class HomeController {
         this.greetingService = greetingService;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String index(Map<String, Object> model) {
         model.put("title", greetingService.getTitle(""));
         model.put("msg", greetingService.getDesc());
