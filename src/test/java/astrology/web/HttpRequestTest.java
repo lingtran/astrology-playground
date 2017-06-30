@@ -1,6 +1,5 @@
 package astrology.web;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +20,11 @@ public class HttpRequestTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-    @Ignore
     @Test
     public void indexReturnsOk() throws Exception {
         ResponseEntity<String> response = this.restTemplate.getForEntity("/", String.class);
 
-        String resource = response.getBody();
-
-        System.out.println("************ RESPONSE BODY ************");
-        System.out.println(resource);
-
-        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
     }
 
 }
