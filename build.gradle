@@ -31,6 +31,14 @@ repositories {
     jcenter()
 }
 
+sourceSets {
+    test {
+        groovy {
+            srcDirs = ['test/java/astrology/*']
+        }
+    }
+}
+
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
