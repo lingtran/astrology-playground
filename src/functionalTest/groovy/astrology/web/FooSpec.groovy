@@ -1,9 +1,9 @@
 package astrology.web
 
-import spock.lang.Ignore
 import geb.Browser
 import geb.spock.GebSpec
 import org.openqa.selenium.chrome.ChromeDriver
+import spock.lang.Ignore
 
 /**
  * Created by ltran on 21/07/17.
@@ -11,12 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver
 class FooSpec extends GebSpec {
 
     // TODO: Figure out if is this the right setup?
+    // TODO: System.setProperty to be done here? Need to clean up path
     def browser() {
+        System.setProperty("webdriver.chrome.driver", "/Users/ltran/Developer/Drivers/chromedriver")
         new Browser(driver: new ChromeDriver())
     }
 //    TODO: Is this the best way to set up a baseUrl? Also overall is this the best structure for interacting with a Browser?
     def setupSpec(){
-        browser.setBaseUrl("https://localhost:8080")
+        browser.getBaseUrl()
     }
 
     @Ignore

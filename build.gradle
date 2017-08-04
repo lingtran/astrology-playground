@@ -63,7 +63,6 @@ dependencies {
     functionalTestCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
     functionalTestCompile 'org.spockframework:spock-spring:1.1-groovy-2.4'
     functionalTestCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.4.0'
-    functionalTestCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.4.0'
 }
 
 task functionalTest(type: Test) {
