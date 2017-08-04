@@ -1,5 +1,6 @@
-package astrology.functionalTest
+package astrology.web
 
+import spock.lang.Ignore
 import geb.Browser
 import geb.spock.GebSpec
 import org.openqa.selenium.chrome.ChromeDriver
@@ -18,7 +19,7 @@ class FooSpec extends GebSpec {
         browser.setBaseUrl("https://localhost:8080")
     }
 
-    @spock.lang.Ignore
+    @Ignore
     def "landing page"() {
         when:
         go "/"
